@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | IONO-DIET Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="About the IONO-DIET project: context, motivation and scientific vision for ionosphere-based detection of earthquakes and tsunamis."
+  />
+
+  <style>
+    :root {
+      --bg-body: #f5f5f7;
+      --bg-header: #1b1b1f;
+      --bg-hero: #2a1214;
+      --bg-hero-grad: radial-gradient(circle at top left, #e03131 0, #2a1214 45%, #1b1b1f 100%);
+      --bg-card: #ffffff;
+      --accent: #e03131;
+      --accent-dark: #b02121;
+      --accent-soft: #ffe3e3;
+      --accent-soft-2: #fff5f5;
+      --text-main: #222222;
+      --text-muted: #666666;
+      --border-soft: #dee2e6;
+      --max-width: 1180px;
+      --radius: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* HEADER */
+
+    header {
+      background: var(--bg-header);
+      color: #ffffff;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .topbar {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.35rem 1.25rem;
+      font-size: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      opacity: 0.95;
+    }
+
+    .topbar small {
+      color: #d0d4de;
+    }
+
+    .main-nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.8rem 1.25rem 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 9px;
+      background: radial-gradient(circle at 25% 20%, #ffc9c9, #e03131 55%, #610b0b 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text span:first-child {
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+
+    .brand-text span:last-child {
+      font-size: 0.75rem;
+      color: #d0d4de;
+    }
+
+    nav {
+      flex: 1 1 auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.85rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      border-bottom-color: var(--accent);
+    }
+
+    /* link ativo */
+    nav a.active {
+      border-bottom-color: var(--accent);
+      font-weight: 600;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-outline {
+      border: 1px solid #e5e7eb;
+      border-radius: 999px;
+      padding: 0.25rem 0.8rem;
+      font-size: 0.8rem;
+      color: #ffffff;
+      background: transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .btn-outline span.icon {
+      font-size: 0.9rem;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      text-decoration: none;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: var(--bg-hero-grad);
+      color: #ffffff;
+      padding: 2.4rem 1.25rem 2.5rem;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      gap: 1.9rem;
+      grid-template-columns: minmax(0, 3fr);
+    }
+
+    .hero-kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #ffd7d7;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.9rem, 3vw, 2.3rem);
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-lead {
+      font-size: 0.95rem;
+      max-width: 44rem;
+      color: #ffecec;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-meta {
+      font-size: 0.8rem;
+      color: #ffd7d7;
+      max-width: 44rem;
+    }
+
+    /* MAIN */
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.9rem 1.25rem 3rem;
+      display: grid;
+      gap: 2.1rem;
+      grid-template-columns: minmax(0, 3.1fr) minmax(0, 2fr);
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .section-block {
+      margin-bottom: 1.7rem;
+    }
+
+    .section-header {
+      margin-bottom: 0.7rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .section-header small {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 0.95rem 1rem 1rem;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+      margin-bottom: 0.9rem;
+    }
+
+    .card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .card p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-bottom: 0.45rem;
+    }
+
+    .card small {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .strip {
+      background: var(--accent-soft-2);
+      border-radius: var(--radius);
+      padding: 0.8rem 0.9rem;
+      border: 1px dashed var(--accent-soft);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.8rem;
+    }
+
+    aside .sidebar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 0.95rem 0.95rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    aside .sidebar-card h2 {
+      font-size: 0.96rem;
+      margin-bottom: 0.4rem;
+      color: var(--text-main);
+    }
+
+    aside ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    aside li + li {
+      margin-top: 0.3rem;
+    }
+
+    footer {
+      border-top: 1px solid #cfd4dc;
+      background: #ffffff;
+      margin-top: 1.4rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.25rem 1.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="topbar">
+      <small>Ionospheric Detection and Imaging of Earthquakes and Tsunamis in Near-Real Time</small>
+      <small>International collaboration: IPGP · INPE · NORSAR · ERAU</small>
+    </div>
+
+    <div class="main-nav">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true">ID</div>
+        <div class="brand-text">
+          <span>IONO-DIET</span>
+          <span>Ionospheric Detection &amp; Imaging of Earthquakes and Tsunamis</span>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="objectives.html">Objectives</a></li>
+          <li><a href="work-packages.html">Work Packages</a></li>
+          <li><a href="deliverables.html" class="active">Deliverables</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <a class="btn-outline" href="work-packages.html">
+          <span class="icon">📊</span>
+          Work packages
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-kicker">Outputs of the project</div>
+        <h1>Key deliverables of IONO-DIET.</h1>
+        <p class="hero-lead">
+          IONO-DIET will produce a set of scientific, methodological and operational
+          deliverables, including software, catalogues, publications and training of
+          young researchers.
+        </p>
+        <p class="hero-meta">
+          Together, these deliverables define the long-term legacy of the project. :contentReference[oaicite:24]{index=24}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section aria-label="Deliverables">
+      <div class="section-block">
+        <div class="section-header">
+          <h2>Main deliverables</h2>
+          <small>Scientific, technical and societal outputs</small>
+        </div>
+
+        <div class="card">
+          <h3>Online catalogue of natural hazard–driven disturbances</h3>
+          <p>
+            A publicly accessible catalogue of ionospheric disturbances associated with
+            earthquakes, tsunamis and other natural hazards, based on space and ground
+            observations collected and analysed during the project. :contentReference[oaicite:25]{index=25}
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>IONO-DIET NRT package &amp; prototype</h3>
+          <p>
+            A near-real-time processing package and prototype demonstration that process
+            GNSS data streams, detect ionospheric signatures of natural hazards and infer
+            associated parameters. This includes codes capable of handling multi-GNSS data
+            in real-time. :contentReference[oaicite:26]{index=26}
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Methods to distinguish ionospheric disturbances</h3>
+          <p>
+            New methods that distinguish natural hazard–driven ionospheric disturbances
+            from those caused by geomagnetic storms, meteorological processes and other
+            sources, with a focus on NRT applicability. :contentReference[oaicite:27]{index=27}
+          </p>
+        </div>
+      </div>
+
+      <div class="section-block">
+        <div class="section-header">
+          <h2>Scientific publications &amp; training</h2>
+          <small>Articles, theses and reports</small>
+        </div>
+
+        <div class="card">
+          <h3>Peer-reviewed articles</h3>
+          <p>
+            The project foresees at least 13 research articles, with contributions from
+            both the French and Brazilian teams, dealing with LOAI coupling, NRT methods
+            and applications to early warning. :contentReference[oaicite:28]{index=28}
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Doctoral theses &amp; student involvement</h3>
+          <p>
+            IONO-DIET will support a dedicated PhD thesis funded by the ANR and will
+            contribute to at least two additional PhD theses linked to the project, as
+            well as training of master students. :contentReference[oaicite:29]{index=29}
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Reports &amp; scientific meetings</h3>
+          <p>
+            Regular scientific reports and presentations at international symposia will
+            document the progress and results of the project, as summarised in the Gantt
+            chart of outcomes. :contentReference[oaicite:30]{index=30}
+          </p>
+        </div>
+      </div>
+
+      <div class="section-block">
+        <div class="section-header">
+          <h2>Software &amp; web services</h2>
+          <small>Long-term technical legacy</small>
+        </div>
+
+        <div class="card">
+          <h3>TEC and NRT processing software</h3>
+          <p>
+            Upgraded TEC processing chains and NRT algorithms will be made available to
+            partners and, where possible, to the broader community, facilitating further
+            research and potential operational use. :contentReference[oaicite:31]{index=31}
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Web page and online tools</h3>
+          <p>
+            A project web page and online tools will serve as a hub for documentation,
+            data visualisation and dissemination of the online catalogue and demonstrator
+            results. :contentReference[oaicite:32]{index=32}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <aside aria-label="Links">
+      <div class="sidebar-card">
+        <h2>Related information</h2>
+        <ul>
+          <li><a href="work-packages.html">Work packages</a></li>
+          <li><a href="objectives.html">Scientific objectives</a></li>
+          <li><a href="team.html">Consortium</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> IONO-DIET Consortium · All rights reserved.</div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="objectives.html">Objectives</a>
+        <a href="work-packages.html">Work Packages</a>
+        <a href="deliverables.html">Deliverables</a>
+        <a href="team.html">Team</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>

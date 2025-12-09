@@ -54,6 +54,12 @@
       text-decoration: underline;
     }
 
+    nav a.active {
+    border-bottom-color: var(--accent);
+    font-weight: 600;
+    }
+
+
     /* HEADER */
 
     header {
@@ -539,15 +545,16 @@
         </div>
       </div>
 
-      <nav aria-label="Primary navigation">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#objectives">Objectives</a></li>
-          <li><a href="#work-packages">Work Packages</a></li>
-          <li><a href="#deliverables">Deliverables</a></li>
-          <li><a href="#team">Team</a></li>
-        </ul>
-      </nav>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="objectives.html">Objectives</a></li>
+        <li><a href="work-packages.html">Work Packages</a></li>
+        <li><a href="deliverables.html">Deliverables</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
 
       <div class="nav-right">
         <a class="btn-outline" href="#contact">
